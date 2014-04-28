@@ -1,32 +1,38 @@
 CI環境構築プロジェクト
 
-# 1. インストール
+## 概要
 
-## 1.1 Vagrant pluginのインストール
+jenkins, geard, gitlab, ircを設定し、CIが回る環境をセットアップする。
+
+## インストール
+
+### 1. Vagrant pluginのインストール
 
 ```
 vagrant plugin install vagrant-omnibus
 ```
 
-## 1.2 Cookbookのインストール
+### 2. Cookbookのインストール
 
 ```
 berks vendor cookbooks
 ```
 
-## 1.3 セットアップ
+### 3. セットアップ
 
 ```
 vagrant up
 ```
 
-# 2. 設定
+## 設定
 
-# Jenkinsサーバ
+### Jenkinsサーバ
 
-# Gitlabサーバ
+### Gitlabサーバ
 
-## Q: gitlabのインストール中に以下のエラーが発生する
+## トラブルシュート
+
+### Q: gitlabのインストール中に以下のエラーが発生する
 
 ``` 
 ================================================================================
@@ -41,7 +47,7 @@ Expected process to exit with [0], but received '17'
 STDOUT: Fetching source index from https://rubygems.org/
 ```
 
-## A: httpsの通信が出来ていないので、gemの取得先をhttpにしましょう
+### A: httpsの通信が出来ていないので、gemの取得先をhttpにしましょう
 
 具体的には、以下の様にhttpスキーマでgemfileを取得するように修正を加えます。
 
