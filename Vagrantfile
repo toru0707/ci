@@ -124,11 +124,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.customize ["modifyvm", :id, "--memory", 2048]
     end
 		jenkins.vm.provision :chef_solo do |chef|
-			chef.run_list = ["chef-timezone","jenkins"]
+			#chef.run_list = ["chef-timezone","jenkins"]
+			chef.run_list = ["chef-timezone","jenkins::master","jenkins-plugin"]
       chef.json = {
         timezone:  {
           zone: "Asia/Tokyo"
-        }
+        },
+        #jenkins: {
+        #  master: {
+        #    install_method: "war",
+        #    version: "1.561"
+        #  }
+        #}
       }
 			#and install "Git Plugin", "Gitlab Plugin"
 		end

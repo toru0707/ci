@@ -1,11 +1,11 @@
-jenkins-app CHANGELOG
-=====================
+jenkins-plugin CHANGELOG
+========================
 
-This file is used to list changes made in each version of the jenkins-app cookbook.
+This file is used to list changes made in each version of the jenkins-plugin cookbook.
 
 0.1.0
 -----
-- [your_name] - Initial release of jenkins-app
+- [your_name] - Initial release of jenkins-plugin
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
